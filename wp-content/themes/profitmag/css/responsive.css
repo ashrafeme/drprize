@@ -334,6 +334,10 @@
   width: 48%;
 }
 
+.featured-post + .clear{
+  display: none;
+}
+
 .featured-post-three{
   width: 23%;
 }

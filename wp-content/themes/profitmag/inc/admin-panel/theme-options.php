@@ -98,7 +98,8 @@ if( is_admin() ): // For admin view only
                              'sound_cloud' => '',
                              'skype' => '',
                              'rss' => '',
-                            
+                            'hide_date' => false,
+                            'read_more' => ''
                               
                            ); 
                            
@@ -329,6 +330,11 @@ if( is_admin() ): // For admin view only
                 				<label class="block"><?php _e('Footer Copyright Text','profitmag'); ?></label>
                 				<input id="footer_copyright" name="profitmag_options[footer_copyright]" type="text" value="<?php echo esc_attr($settings['footer_copyright']); ?>" />
             				</div>
+
+                            <div class="form-row">
+                                <label class="block"><?php _e('Read More Text in Archive Pages','profitmag'); ?></label>
+                                <input name="profitmag_options[read_more]" type="text" value="<?php echo esc_attr($settings['read_more']); ?>" />
+                            </div>
                             
                             
             			</div> <!-- #options-group-1 -->
@@ -339,6 +345,16 @@ if( is_admin() ): // For admin view only
             			<div id="options-group-2" class="group" style="display: none;">
             			     <h3><?php _e('Home Page Settings','profitmag'); ?></h3> 
                                  
+                                 <div class="form-row inline-label">
+                                 <label class="block"><?php _e('Hide Posted Date','profitmag'); ?></label>
+                                 <div class="checkbox">
+                                 <label for="hide_date">
+                                     <input type="checkbox" id="hide_date" name="profitmag_options[hide_date]" value="1" <?php checked( true, $settings['hide_date'] ); ?> />
+                                        <?php _e('Check to Hide','profitmag'); ?>
+                                        </label>
+                                    </div>
+                                 </div>
+
                                  <div class="form-row inline-label">
                 					<label class="block"><?php _e('Featured Block ( Besides Slider )','profitmag'); ?></label>
                 					<select id="featured_block_beside" name="profitmag_options[featured_block_beside]">
@@ -1023,6 +1039,7 @@ if( is_admin() ): // For admin view only
         $input['right_cat_post_two'] = wp_filter_nohtml_kses( $input['right_cat_post_two'] );
         
         $input['footer_copyright'] = wp_filter_nohtml_kses( $input['footer_copyright'] );
+        $input['read_more'] = wp_filter_nohtml_kses( $input['read_more'] ); 
         
         
         
@@ -1130,6 +1147,10 @@ if( is_admin() ): // For admin view only
         if ( ! isset( $input['tc_activate'] ) )
 		  $input['tc_activate'] = null;
         $input['tc_activate'] = ( $input['tc_activate'] == 1 ? 1 : 0 );
+
+        if ( ! isset( $input['hide_date'] ) )
+          $input['hide_date'] = null;
+        $input['hide_date'] = ( $input['hide_date'] == 1 ? 1 : 0 );
         
         // For Social Links
         if ( ! isset( $input['show_social_header'] ) )

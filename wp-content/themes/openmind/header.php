@@ -15,7 +15,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/lightbox.css" rel="stylesheet" media="screen">
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" media="screen">
     <link href="<?php echo get_template_directory_uri(); ?>/css/color-niceblue.css" rel="stylesheet" media="screen" title="default">
-    <link href="<?php echo get_template_directory_uri(); ?>/css/width-full.css" rel="stylesheet" media="screen" title="default">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/width-boxed.css" rel="stylesheet" media="screen" title="default">
     <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-rtl.min.css" rel="stylesheet" media="screen">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,7 +34,7 @@
 
 <?php if(of_get_option('om_show_options_panel','')) : ?>
     <!-- Setting Options -->
-    <div id="color-switcher" class="animated fadeIn animation-dalay-10">
+    <div id="color-switcher" class="animated fadeIn animation-dalay-10 hidden">
         <div id="color-switcher-tab">
             <i class="fa fa-gear fa fa-2x"></i>
         </div>
@@ -70,7 +70,7 @@
 <header id="header" class="hidden-xs">
     <div class="container">
         <div id="header-title">
-            <h1 class="animated fadeInDown"><a href="<?php bloginfo('home'); ?>"><?php echo of_get_option('title_header','Open <span>Mind</span>'); ?></a></h1>
+            <h1 class="animated fadeInDown"><a href="<?php bloginfo('home'); ?>"><?php echo get_bloginfo('name'); ?></a></h1>
             <p class="animated fadeInLeft"><?php bloginfo('description'); ?></p>
         </div>
 
@@ -103,7 +103,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand visible-xs" href="index.html">Open <span>Mind</span></a>
+            <a class="navbar-brand visible-xs" href="index.html"><?php echo get_bloginfo('name'); ?></span></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-mind-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-bars fa-inverse"></i>

@@ -23,8 +23,10 @@ if( $profitmag_settings['tc_activate'] == 1 ) {
                         <h2 class="block-title"><span class="bordertitle-red"></span><?php echo $cat_name; ?></h2>
                         <div class="feature-post-wrap clearfix">
                 <?php
+                    $count = 0;
                         while( $query1->have_posts() ):
                             $query1->the_post();
+                        $count++;
                 ?>
                             <div class="featured-post clearfix">
                                 <figure class="post-thumb clearfix">
@@ -44,6 +46,7 @@ if( $profitmag_settings['tc_activate'] == 1 ) {
                                 </div>
                             </div>
                 <?php
+                if($count % 3 == 0) echo "<div class='clear'></div>";
                         endwhile;
                     endif;
                     wp_reset_postdata();
@@ -153,8 +156,10 @@ if( $profitmag_settings['tc_activate'] == 1 ) {
                 ?>
                         <h2 class="block-title"><span class="bordertitle-red"></span><?php echo $cat_name; ?></h2>
                 <?php
+                    $count = 0;
                         while( $query2->have_posts() ):
                             $query2->the_post();
+                        $count++;
                 ?>
                             <div class="featured-post clearfix">
                                 <figure class="post-thumb clearfix">
@@ -174,6 +179,7 @@ if( $profitmag_settings['tc_activate'] == 1 ) {
                                 </div>
                             </div>
                 <?php
+                if($count % 3 == 0) echo "<div class='clear'></div>";
                         endwhile;
                     endif;
                     wp_reset_postdata();

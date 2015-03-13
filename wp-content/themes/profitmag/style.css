@@ -4,7 +4,7 @@ Theme URI: http://wpgaint.com/wpgiantthemes/profitmag/
 Author: WpGaint
 Author URI: http://www.wpgaint.com/themes/
 Description: ProfitMag is a clean, responsive magazine theme with elegant design suitalbe for bloging, News website. It comes with a highly customizable theme option panel that let you manage the website at an instant.
-Version: 1.03
+Version: 1.04
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: profitmag
@@ -1840,7 +1840,6 @@ article.post .read-more {
     display: block;
     float: right;
     margin-bottom: 16px;
-    width: 100px;
 }
 
 .page-numbers{

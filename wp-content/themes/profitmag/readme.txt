@@ -68,3 +68,10 @@ Version 1.03
 * Fixed date display issue on archive page.
 * Fixed image size problem for home page.
 * Added size text for ads in theme options section
+
+Version 1.04
+* Read More text in archive pages changable
+* Options to Show and hide posted date added
+* Image alignment problem fixed
+* Theme Options Tab Bug Fixed
+* Added 2 required plugin via TGM

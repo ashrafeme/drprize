@@ -1,10 +1,10 @@
 <aside id="footer-widgets">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer_sidebar') ) : ?>
 
-                <div class="col-md-4">
-                    <h3 class="footer-widget-title">Sitemap</h3>
+                <div class="col-md-12">
+                    <h3 class="footer-widget-title">خريطة الموقع</h3>
                     <?php
                         wp_nav_menu( array(
                             'menu'              => 'sitemap',
@@ -12,19 +12,19 @@
                             'depth'             => 2,
                             'container'         => '',
                             'container_class'   => '',
-                            'menu_class'        => 'list-unstyled three_cols',
+                            'menu_class'        => 'list-unstyled one_cols',
                         ));
                     ?>
-                    <h3 class="footer-widget-title">Subscribe</h3>
+                   <!-- <h3 class="footer-widget-title ">Subscribe</h3>
                     <p>Lorem ipsum Amet fugiat elit nisi anim mollit in labore ut esse Duis ullamco ad dolor veniam velit lorem ipsum dolor sit amet, consectetur adipisicing..</p>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Email Adress">
                         <span class="input-group-btn">
                             <button class="btn btn-success" type="button">Subscribe</button>
                         </span>
-                    </div><!-- /input-group -->
+                    </div> /input-group -->
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 hidden">
                     <div class="footer-widget">
                         <h3 class="footer-widget-title">Recent Post</h3>
                         <?php $portfolio_id = get_cat_ID(of_get_option('om_portfolio_category','')); ?>
@@ -32,7 +32,7 @@
                         
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 hidden">
                     <div class="footer-widget">
                         <h3 class="footer-widget-title">Recent Works</h3>
                         <div class="row">
@@ -60,7 +60,10 @@
 </aside> <!-- footer-widgets -->
 
 <footer id="footer">
-    <p>&copy; 2013 <a href="<?php bloginfo('home'); ?>"><?php bloginfo('name'); ?></a>, inc. All rights reserved.</p>
+    <p>&copy; 2015 
+    جميع الحقوق محفوظة
+    <a href="<?php bloginfo('home'); ?>"><?php bloginfo('name'); ?></a> 
+    </p>
 </footer>
 
 </div> <!-- boxed -->
@@ -106,7 +109,7 @@
 <?php wp_footer(); ?>
 
 <script>
-    window.location.refresh()
+   // window.location.refresh()
 </script>
 
 </body>

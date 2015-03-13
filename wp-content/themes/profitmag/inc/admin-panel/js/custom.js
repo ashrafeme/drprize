@@ -13,9 +13,6 @@ jQuery(document).ready(function($) {
     
     // Find if a selected tab is saved in localStorage
 		var active_tab = '';
-		if ( typeof(localStorage) != 'undefined' ) {
-			active_tab = localStorage.getItem("active_tab");
-		}
 
 		// If active tab is saved and exists, load it's .group
 		if (active_tab != '' && $(active_tab).length ) {
@@ -38,9 +35,6 @@ jQuery(document).ready(function($) {
 
 			var group = $(this).attr('href');
 
-			if (typeof(localStorage) != 'undefined' ) {
-				localStorage.setItem("active_tab", $(this).attr('href') );
-			}
 
 			$('.group').hide();
 			$(group).fadeIn();

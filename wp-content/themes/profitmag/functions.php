@@ -153,3 +153,8 @@ require get_template_directory().'/inc/profitmag-functions.php';
  * Implement Custom Widgets
  */
 require get_template_directory().'/inc/profitmag-widgets.php';
+
+/**
+ * Implement TGM
+ */
+require get_template_directory().'/inc/class-tgm-plugin-activation.php';
