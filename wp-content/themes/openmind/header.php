@@ -65,6 +65,11 @@
     </div> <!-- color-switcher -->
 <?php endif; ?>
 
+<style type="text/css">
+        #header{
+        background-image:url("https://drprize-ashrafeme.c9.io/wp-content/uploads/2015/03/pan.jpg");
+        }
+</style>
 <div class="boxed">
 
 <header id="header" class="hidden-xs">

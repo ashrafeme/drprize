@@ -1,0 +1,1 @@
+[23-Mar-2015 08:26:38 UTC] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13) in /home/ubuntu/workspace/wp-content/plugins/easy-bootstrap-shortcodes/styles/ebs_dynamic_css.php on line 4
